@@ -15,7 +15,11 @@ namespace FinalAssignment.Models
     public partial class Comment
     {
         public int id { get; set; }
-        public Nullable<int> postId { get; set; }
+        public int postId { get; set; }
         public string details { get; set; }
+        public int userId { get; set; }
+    
+        public virtual Post Post { get; set; }
+        public virtual User User { get; set; }
     }
 }

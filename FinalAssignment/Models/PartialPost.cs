@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Security.Policy;
 using System.Web;
@@ -8,6 +9,7 @@ using System.Web.Routing;
 
 namespace FinalAssignment.Models
 {
+    [MetadataType(typeof(PostMetadata))]
     public partial class Post
     {
         public List<Link> Links { get { return GenerateLinks(); } }

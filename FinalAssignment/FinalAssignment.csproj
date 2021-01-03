@@ -95,15 +95,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\FinalAssignment.Context.tt">
+    <Content Include="Models\FinalAssignmentModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FinalAssignment.edmx</DependentUpon>
-      <LastGenOutput>FinalAssignment.Context.cs</LastGenOutput>
+      <DependentUpon>FinalAssignmentModel.edmx</DependentUpon>
+      <LastGenOutput>FinalAssignmentModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\FinalAssignment.tt">
+    <Content Include="Models\FinalAssignmentModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FinalAssignment.edmx</DependentUpon>
-      <LastGenOutput>FinalAssignment.cs</LastGenOutput>
+      <DependentUpon>FinalAssignmentModel.edmx</DependentUpon>
+      <LastGenOutput>FinalAssignmentModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
@@ -111,46 +111,56 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BasicAuthenticationAttribute.cs" />
     <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs">
-      <DependentUpon>FinalAssignment.tt</DependentUpon>
+      <DependentUpon>FinalAssignmentModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\FinalAssignment.Context.cs">
+    <Compile Include="Models\FinalAssignmentModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FinalAssignment.Context.tt</DependentUpon>
+      <DependentUpon>FinalAssignmentModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\FinalAssignment.cs">
+    <Compile Include="Models\FinalAssignmentModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FinalAssignment.tt</DependentUpon>
+      <DependentUpon>FinalAssignmentModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\FinalAssignment.Designer.cs">
+    <Compile Include="Models\FinalAssignmentModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FinalAssignment.edmx</DependentUpon>
+      <DependentUpon>FinalAssignmentModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\PartialComment.cs" />
     <Compile Include="Models\PartialPost.cs" />
+    <Compile Include="Models\PartialUser.cs" />
     <Compile Include="Models\Post.cs">
-      <DependentUpon>FinalAssignment.tt</DependentUpon>
+      <DependentUpon>FinalAssignmentModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PostMetadata.cs" />
+    <Compile Include="Models\User.cs">
+      <DependentUpon>FinalAssignmentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserMapper.cs" />
+    <Compile Include="Models\UserMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CommentRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="UserAuthentication.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\FinalAssignment.edmx">
+    <EntityDeploy Include="Models\FinalAssignmentModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FinalAssignment.Designer.cs</LastGenOutput>
+      <LastGenOutput>FinalAssignmentModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\FinalAssignment.edmx.diagram">
-      <DependentUpon>FinalAssignment.edmx</DependentUpon>
+    <Content Include="Models\FinalAssignmentModel.edmx.diagram">
+      <DependentUpon>FinalAssignmentModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

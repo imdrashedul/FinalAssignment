@@ -29,7 +29,7 @@ namespace FinalAssignment
                 string username = credentials[0];
                 string password = credentials[1];
 
-                if(username == "finalassignment" && password=="keepcalm")
+                if(UserAuthentication.Verify(username, password))
                 {
                     Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), null);
                 }

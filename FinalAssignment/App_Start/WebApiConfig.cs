@@ -18,6 +18,12 @@ namespace FinalAssignment
             //config.Filters.Add(new BasicAuthenticationAttribute());
 
             config.Routes.MapHttpRoute(
+                name: "SingleUserApi",
+                routeTemplate: "api/users/{username}/{password}",
+                defaults: new { controller = "User", action = "Get" }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "SingleCommentApi",
                 routeTemplate: "api/posts/{id}/comments/{commentId}",
                 defaults: new { controller = "Post", action = "GetComment" }
